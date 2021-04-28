@@ -1,4 +1,5 @@
 import requests
+import os
 from sendEmail import send_email
 
 def snagCourse(courseSubject, courseNumber, courseSection, email):
@@ -9,3 +10,8 @@ def snagCourse(courseSubject, courseNumber, courseSection, email):
 	if(r_dict['general_seats_remaining'] > 0):
 		print("Sending email")
 		send_email("Test", "Your course {}{} {} has an open spot!".format(courseSubject, courseNumber, courseSection), email)
+
+print(os.environ["EMAIL"])
+print(os.environ["COURSESUBJECT"])
+print(os.environ["COURSENUMBER"])
+print(os.environ["COURSESECTION"])
