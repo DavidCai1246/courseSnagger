@@ -1,7 +1,6 @@
 import smtplib
-import credentials
-EMAIL_ADDRESS = credentials.EMAIL_ADDRESS
-PASSWORD = credentials.PASSWORD
+EMAIL_ADDRESS = os.environ["ADMIN_EMAIL"]
+PASSWORD = os.environ["ADMIN_PASSWORD"]
 
 def send_email(subject, msg, email):
 	try:
