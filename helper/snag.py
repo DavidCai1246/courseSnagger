@@ -6,7 +6,7 @@ import time
 def snagCourse(courseSubject, courseNumber, courseSection, email):
 	url = 'https://api.ubccourses.com/sectionInfo/{}/{}/{}?realtime=1'.format(courseSubject, courseNumber, courseSection)
 	r = requests.get(url)
-	print("Calling: ".format(url))
+	print("Calling: {}".format(url))
 	r_dict = r.json()
 
 	if(r_dict['general_seats_remaining'] > 0):
