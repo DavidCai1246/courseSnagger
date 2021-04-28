@@ -1,4 +1,5 @@
 import smtplib
+import os
 EMAIL_ADDRESS = os.environ["ADMIN_EMAIL"]
 PASSWORD = os.environ["ADMIN_PASSWORD"]
 
