@@ -1,1 +1,1 @@
-worker: python3 ./helper/snag.py
+worker: python3 ./helper/main.py

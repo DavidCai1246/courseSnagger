@@ -18,6 +18,45 @@
                         {{ form.email(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
+                <div class="form-group">
+                    {{ form.CourseName.label(class="form-control-label") }}
+                    {% if form.CourseName.errors %}
+                        {{ form.CourseName(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.CourseName.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.CourseName(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.CourseNumber.label(class="form-control-label") }}
+                    {% if form.CourseNumber.errors %}
+                        {{ form.CourseNumber(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.CourseNumber.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.CourseNumber(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.CourseSection.label(class="form-control-label") }}
+                    {% if form.CourseSection.errors %}
+                        {{ form.CourseSection(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.CourseSection.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.CourseSection(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
 			</fieldset>
 			<div class ="form-group">
 				{{ form.submit(class="btn btn-outline-info") }}
