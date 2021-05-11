@@ -1,11 +1,12 @@
 import requests
-from sendEmail import send_email
+from helper.sendEmail import send_email
 
 def snagCourse(courseSubject, courseNumber, courseSection, email):
 	url = 'https://api.ubccourses.com/sectionInfo/{}/{}/{}?realtime=1'.format(courseSubject, courseNumber, courseSection)
 	r = requests.get(url)
 	print("Calling: {}".format(url))
 	r_dict = r.json()
+	print(r_dict)
 
 	if(r_dict['general_seats_remaining'] > 0):
 		print("Sending email")
