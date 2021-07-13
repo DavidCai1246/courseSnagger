@@ -6,7 +6,7 @@ def snagCourse(courseSubject, courseNumber, courseSection, email):
 	r = requests.get(url)
 	print("Calling: {}".format(url))
 	r_dict = r.json()
-	print("The current total seats remaining is: {}", r_dict['total_seats_remaining'])
+	print("The current total seats remaining is: {}".format(r_dict['total_seats_remaining']))
 
 	if(r_dict['total_seats_remaining'] > 0):
 		print("Sending email")
